@@ -40,12 +40,9 @@ async function renderProducts() {
     const products = await getProducts();
     const productsDiv = document.querySelector(".products");
     
-    // initialize cart value
-    const value = loca
-  
+
     
-    
-    
+ 
     productsDiv.innerHTML = '';
 
     products.forEach(product => {
