@@ -13,7 +13,7 @@ function getProductCard(product) {
         <figure>
             <img src="${product.thumbnail}" alt="${product.title}" />
         </figure>
-        <div class="absolute top-0 right-0 bg-primary text-white w-12 h-12 flex-center justify-center text-center font-semibold rounded-tr-2xl rounded-bl-2xl">${product.discountPercentage}% OFF</div>
+            <div class="absolute top-0 right-0 bg-primary text-white w-12 h-12 flex-center justify-center text-center font-semibold rounded-tr-2xl rounded-bl-2xl">${product.discountPercentage}% OFF</div>
         <div class="card-body">
             <h2 class="card-title">${product.title}</h2>
             <p>${product.description}</p>
@@ -39,10 +39,10 @@ function getProductCard(product) {
 async function renderProducts() {
     const products = await getProducts();
     const productsDiv = document.querySelector(".products");
-    
+    const value = localStorage.getItem("cart")
 
     
- 
+    // Clear products div before rendering (useful for debugging)
     productsDiv.innerHTML = '';
 
     products.forEach(product => {
@@ -53,6 +53,3 @@ async function renderProducts() {
 document.addEventListener("DOMContentLoaded", () => {
     renderProducts();
 });
-
-
-

@@ -3,7 +3,7 @@ import daisyui from "daisyui"
 import { Container } from "postcss"
 export default {
   content: [
-    "./*index.html","./card.html",  ],
+    "./*index.html","./cart.html",  ],
   theme: {
     container: {
       center: true,
