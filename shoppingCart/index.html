@@ -6,59 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>shopping card</title>
   </head>
-  <body >
-    <!--navbar--> 
+  <body>
+    <!-- Navbar -->
     <header>
       <div class="navbar bg-base-100">
-      
         <div class="flex-1">
-          <a class="btn btn-ghost text-xl w-138px h-28px  ">MegaMart</a>
+          <a class="btn btn-ghost text-xl w-138px h-28px">MegaMart</a>
         </div>
         <div class="flex-none">
-        
-            <a href="login.html" class="btn btn-ghost hidden sm:flex ">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-              class="text-primary">
-                
-                <circle cx="12" cy="8" r="4.75" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M6 21C6 21 6 19.75 6 18.5C6 17.25 8.24914 16 12 16C15.7509 16 18 17.25 18 18.5C18 20.375 18 21 18 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                
-              Sign Up/Sgin In
-            </a>
-         
+          <a href="login.html" class="btn btn-ghost hidden sm:flex">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary">
+              <circle cx="12" cy="8" r="4.75" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M6 21C6 21 6 19.75 6 18.5C6 17.25 8.24914 16 12 16C15.7509 16 18 17.25 18 18.5C18 20.375 18 21 18 21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Sign Up/Sign In
+          </a>
           <a href="cart.html" class="btn btn-ghost hidden sm:flex">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-            class="text-primary">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-primary">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M7.42226 19.8203C7.84426 19.8203 8.18726 20.1633 8.18726 20.5853C8.18726 21.0073 7.84426 21.3493 7.42226 21.3493C7.00026 21.3493 6.65826 21.0073 6.65826 20.5853C6.65826 20.1633 7.00026 19.8203 7.42226 19.8203Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M18.6747 19.8203C19.0967 19.8203 19.4397 20.1633 19.4397 20.5853C19.4397 21.0073 19.0967 21.3493 18.6747 21.3493C18.2527 21.3493 17.9097 21.0073 17.9097 20.5853C17.9097 20.1633 18.2527 19.8203 18.6747 19.8203Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M2.74988 3.25L4.82988 3.61L5.79288 15.083C5.87088 16.018 6.65188 16.736 7.58988 16.736H18.5019C19.3979 16.736 20.1579 16.078 20.2869 15.19L21.2359 8.632C21.3529 7.823 20.7259 7.099 19.9089 7.099H5.16388" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M14.1254 10.795H16.8984" stroke="#currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              
-              
-            cart
-            <div class="badge badge-primary">2</div>
+            </svg>
+            Cart
+            <div class="cart-total-items badge badge-primary">0</div>
           </a>
-          
           <div class="drawer sm:hidden">
             <input id="my-drawer" type="checkbox" class="drawer-toggle" />
             <div class="drawer-content">
               <!-- Page content here -->
-              <label for="my-drawer" class="btn btn-square btn-ghost drawer-button">       
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      class="inline-block h-5 w-5 stroke-current">
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-    
-            </label>
+              <label for="my-drawer" class="btn btn-square btn-ghost drawer-button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block h-5 w-5 stroke-current">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </label>
             </div>
             <div class="drawer-side">
               <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
@@ -69,25 +50,104 @@
               </ul>
             </div>
           </div>
-            
         </div>
-        
       </div>
     </header>
-   
     
-    <!--card-->
-    <section id="product" class="my-10">
-      <div class=" container">
-       <div class=" products grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-      
-
-       </div>
+    <!-- Category Navigation -->
+    <section class="mx-auto py-1">
+      <hr />
+      <div class="py-1">
+        <ul class="menu menu-horizontal px-1 flex justify-center gap-5">
+          <li class="bg-slate-100 rounded-full hover:bg-black hover:text-white"><details><summary>Groceries</summary></details></li>
+          <li class="bg-slate-100 rounded-full hover:bg-black hover:text-white"><details><summary>Premium Fruits</summary></details></li>
+          <li class="bg-slate-100 rounded-full hover:bg-black hover:text-white"><details><summary>Home & Kitchen</summary></details></li>
+          <li class="bg-slate-100 rounded-full hover:bg-black hover:text-white"><details><summary>Fashion</summary></details></li>
+          <li class="bg-slate-100 rounded-full hover:bg-black hover:text-white"><details><summary>Electronics</summary></details></li>
+          <li class="bg-slate-100 rounded-full hover:bg-black hover:text-white"><details><summary>Beauty</summary></details></li>
+          <li class="bg-slate-100 rounded-full hover:bg-black hover:text-white"><details><summary>Home Improvement</summary></details></li>
+          <li class="bg-slate-100 rounded-full hover:bg-black hover:text-white"><details><summary>Sports, Toys & Luggage</summary></details></li>
+        </ul>
       </div>
-
+      <hr />
     </section>
-  
-    
+
+    <!-- Banner -->
+    <section class="mx-auto max-w-7xl px-2 py-5">
+      <img class="w-full" src="/Group 205.svg" alt="banner" />
+    </section>
+
+    <!-- Product Section -->
+    <section class="mx-auto max-w-7xl px-4 py-5">
+      <div>
+        <a class="text-3xl font-bold">Get the best Products</a>
+      </div>
+      <hr />
+    </section>
+
+    <!-- Cards -->
+    <section id="product" class="my-10">
+      <div class="container">
+        <div class="products grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <!-- Products will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section>
+      <footer style="background-color: #2b00b3; color: white; padding: 20px; text-align: left;">
+
+        <div  class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+          <div>
+            <h2 style="font-size: 24px; margin: 0;">MegaMart</h2>
+            <div style="margin-top: 20px;">
+              <h3>Contact Us</h3>
+              <p class="flex ">
+                <img src="ant-design_whats-app-outlined.png" alt="WhatsApp Icon" style="vertical-align: middle;"> Whats App <br>+1 202-918-2132</p>
+              <p class="flex"><img src="Call.png" alt="Call Icon" style="vertical-align: middle;"> Call Us <br>+1 202-918-2132</p>
+            </div>
+            <div style="margin-top: 20px;">
+              <h3>Download App</h3>
+            
+              <p class="flex">  <a href="#"><img src="image 11.png" alt="App Store" style="margin-right: 10px;"></a>
+                <a href="#"><img src="image 10.png" alt="Google Play"></a></p>
+
+             
+
+            </div>
+          </div>
+          <div>
+            <h2 class="pb-5">Most Popular Categories</h2>
+            <ul style="list-style-type: none; padding: 0;">
+              <li>Staples</li>
+              <li>Beverages</li>
+              <li>Personal Care</li>
+              <li>Home Care</li>
+              <li>Baby Care</li>
+              <li>Vegetables & Fruits</li>
+              <li>Snacks & Foods</li>
+              <li>Dairy & Bakery</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="pb-5">Customer Services</h2>
+            <ul style="list-style-type: none; padding: 0;">
+              <li>About Us</li>
+              <li>Terms & Conditions</li>
+              <li>FAQ</li>
+              <li>Privacy Policy</li>
+              <li>E-waste Policy</li>
+              <li>Cancellation & Return Policy</li>
+            </ul>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+          <p>© 2022 All rights reserved. Reliance Retail Ltd.</p>
+        </div>
+      </footer>
+    </section>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
